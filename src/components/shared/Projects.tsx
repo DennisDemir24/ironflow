@@ -7,19 +7,19 @@ const featuredProjects = [
   {
     title: 'E-Commerce Platform',
     description: 'A scalable e-commerce solution with AI-powered recommendations',
-    image: null,
+    image: '/placeholders/ecommerce-project.jpg',
     tech: ['React', 'Node.js', 'MongoDB'],
   },
   {
     title: 'FinTech Dashboard',
     description: 'Real-time financial analytics and reporting platform',
-    image: null,
+    image: '/placeholders/fintech-project.jpg',
     tech: ['Vue.js', 'Python', 'PostgreSQL'],
   },
   {
     title: 'Healthcare App',
     description: 'Telemedicine platform with secure video consultations',
-    image: null,
+    image: '/placeholders/healthcare-project.jpg',
     tech: ['React Native', 'AWS', 'GraphQL'],
   },
 ];
