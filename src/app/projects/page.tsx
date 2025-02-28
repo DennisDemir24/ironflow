@@ -26,16 +26,16 @@ const projects = [
     ]
   },
   {
-    title: 'AI-Powered Analytics Platform',
-    description: 'Enterprise-scale analytics solution with predictive insights and real-time monitoring',
-    tags: ['React', 'Python', 'TensorFlow', 'D3.js', 'GCP'],
-    imageUrl: '/projects/analytics.jpg',
-    demoUrl: 'https://demo-analytics.example.com',
-    githubUrl: 'https://github.com/example/analytics',
-    client: 'DataCorp Industries',
-    industry: 'Business Intelligence',
-    timeline: '9 months',
-    teamSize: '12 developers',
+    title: 'Habiter Mobile App',
+    description: 'Habiter is a mobile application for creating better habits and track your progress.',
+    tags: ['React-Native', 'Expo', 'TailwindCSS', 'SQL'],
+    imageUrl: '/projects/habiter-app.png',
+    demoUrl: '',
+    githubUrl: '',
+    client: 'Habiter App',
+    industry: 'Lifestyle',
+    timeline: '12 months',
+    teamSize: '15 developers',
     challenge: 'DataCorp needed to process and analyze massive amounts of data from multiple sources in real-time. Their existing solution was slow, prone to errors, and couldn\'t provide actionable insights quickly enough for their clients.',
     solution: 'We built a scalable analytics platform using React and Python, incorporating machine learning models for predictive analytics. The solution features real-time data processing, interactive visualizations, and automated report generation with natural language insights.',
     results: [
@@ -46,7 +46,7 @@ const projects = [
       'Saved clients an average of 20 hours per week in manual analysis'
     ]
   },
-  {
+/*   {
     title: 'FinTech Mobile Banking Platform',
     description: 'Secure and intuitive mobile banking solution with advanced features',
     tags: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
@@ -66,7 +66,7 @@ const projects = [
       '2M+ active users within 6 months',
       'Cut transaction processing time to under 1 second'
     ]
-  }
+  } */
 ]
 
 export default function ProjectsPage() {
