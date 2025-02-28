@@ -92,7 +92,7 @@ export default function ProjectsPage() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
-            Discover how we've helped businesses transform their digital presence and achieve remarkable results through innovative solutions
+            Discover how we&apos;ve helped businesses transform their digital presence and achieve remarkable results through innovative solutions
           </p>
         </div>
 
