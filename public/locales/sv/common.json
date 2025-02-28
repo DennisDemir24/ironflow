@@ -1,0 +1,34 @@
+{
+  "header": {
+    "services": "Tjänster",
+    "projects": "Projekt",
+    "contact": "Kontakt",
+    "contactUs": "Kontakta oss"
+  },
+  "footer": {
+    "copyright": "© 2024 IronFlow Solutions. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor"
+  },
+  "languageSwitcher": {
+    "en": "Engelska",
+    "sv": "Svenska"
+  },
+  "home": {
+    "hero": {
+      "title": "Förvandlar Idéer till",
+      "excellence": "Digital Excellens",
+      "subtitle": "Vi skapar innovativa mjukvarulösningar som ger företag möjlighet att blomstra i den digitala tidsåldern. Från skräddarsydda applikationer till mobil utveckling, vi förvandlar din vision till verklighet.",
+      "cta": "Kom igång"
+    },
+    "services": {
+      "title": "Våra Tjänster",
+      "subtitle": "Omfattande lösningar anpassade efter dina behov"
+    },
+    "contact": {
+      "title": "Redo att transformera ditt företag?",
+      "subtitle": "Kontakta vårt team för att diskutera ditt projekt.",
+      "cta": "Kontakta oss idag"
+    }
+  }
+} 

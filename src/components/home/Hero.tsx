@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { Logo } from '@/components/icons/logo'
+import { useTranslation } from 'react-i18next'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useTranslation('common')
 
   useEffect(() => {
     setIsVisible(true)
@@ -30,8 +32,8 @@ export default function Hero() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
-            Transforming Ideas into{' '}
-            <span className="text-indigo-600 dark:text-indigo-400">Digital Excellence</span>
+            {t('home.hero.title')}{' '}
+            <span className="text-indigo-600 dark:text-indigo-400">{t('home.hero.excellence')}</span>
           </h1>
           
           <p 
@@ -39,7 +41,7 @@ export default function Hero() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
-            We craft innovative software solutions that empower businesses to thrive in the digital age. From custom applications to mobile development, we turn your vision into reality.
+            {t('home.hero.subtitle')}
           </p>
 
           <div 
@@ -51,14 +53,14 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-medium transition-colors"
             >
-              Get Started
+              {t('home.hero.cta')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link
               href="/projects"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 transition-colors"
             >
-              View Our Work
+              {t('header.projects')}
             </Link>
           </div>
         </div>

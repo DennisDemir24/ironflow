@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 import { Facebook, Twitter, Linkedin, Github, Mail, MapPin, Phone } from 'lucide-react'
 
 const companyInfo = {
@@ -33,7 +34,7 @@ const socialLinks = [
 ]
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const { t } = useTranslation('common')
 
   return (
     <footer className="bg-accent/5 border-t">
@@ -121,14 +122,14 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} {companyInfo.name}. All rights reserved.
+              {t('footer.copyright')}
             </p>
             <div className="flex gap-4 text-sm text-muted-foreground">
               <Link href="/privacy" className="hover:text-primary transition-colors">
-                Privacy Policy
+                {t('footer.privacyPolicy')}
               </Link>
               <Link href="/terms" className="hover:text-primary transition-colors">
-                Terms of Service
+                {t('footer.termsOfService')}
               </Link>
             </div>
           </div>

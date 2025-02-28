@@ -1,0 +1,34 @@
+{
+  "header": {
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "copyright": "© 2024 IronFlow Solutions. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "languageSwitcher": {
+    "en": "English",
+    "sv": "Swedish"
+  },
+  "home": {
+    "hero": {
+      "title": "Transforming Ideas into",
+      "excellence": "Digital Excellence",
+      "subtitle": "We craft innovative software solutions that empower businesses to thrive in the digital age. From custom applications to mobile development, we turn your vision into reality.",
+      "cta": "Get Started"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive solutions tailored to your needs"
+    },
+    "contact": {
+      "title": "Ready to transform your business?",
+      "subtitle": "Get in touch with our team to discuss your project.",
+      "cta": "Contact Us Today"
+    }
+  }
+} 
