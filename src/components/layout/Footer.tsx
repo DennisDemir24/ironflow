@@ -7,9 +7,9 @@ import { Facebook, Twitter, Linkedin, Github, Mail, MapPin, Phone } from 'lucide
 const companyInfo = {
   name: 'IronFlow Solutions',
   description: 'We craft innovative digital solutions that empower businesses to thrive in the modern world.',
-  address: '123 Tech Street, San Francisco, CA 94105',
-  email: 'contact@ironflow.dev',
-  phone: '+1 (555) 123-4567'
+  address: '',
+  email: '',
+  phone: ''
 }
 
 const quickLinks = [
