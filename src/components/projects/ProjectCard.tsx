@@ -12,7 +12,6 @@ interface ProjectCardProps {
   imageUrl: string
   demoUrl?: string
   githubUrl?: string
-  client: string
   challenge: string
   solution: string
 }
@@ -24,7 +23,6 @@ export default function ProjectCard({
   imageUrl,
   demoUrl,
   githubUrl,
-  client,
   challenge,
   solution,
 }: ProjectCardProps) {
@@ -103,12 +101,6 @@ export default function ProjectCard({
         }`}>
           <div className="overflow-hidden">
             <div className="grid gap-6 pt-4 border-t">
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-muted-foreground">Client:</span>
-                  <p className="font-medium">{client}</p>
-                </div>
-              </div>
 
               <div>
                 <h4 className="font-semibold mb-2">The Challenge</h4>
