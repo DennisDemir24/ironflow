@@ -9,8 +9,7 @@ const services = [
     description: 'Tailored solutions designed to meet your unique business needs. We create scalable, secure, and efficient software that drives your business forward.',
     icon: Code,
     features: [
-      'Enterprise Software Solutions',
-      'Cloud-Native Applications',
+      'AI-Integrate applications',
       'API Development & Integration',
       'Legacy System Modernization'
     ]
@@ -23,7 +22,6 @@ const services = [
       'iOS & Android Development',
       'Cross-Platform Solutions',
       'UI/UX Design',
-      'App Store Optimization'
     ]
   },
   {
@@ -33,7 +31,6 @@ const services = [
     features: [
       'Full-Stack Development',
       'Progressive Web Apps',
-      'E-commerce Solutions',
       'Performance Optimization'
     ]
   }

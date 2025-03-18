@@ -30,5 +30,21 @@
       "subtitle": "Get in touch with our team to discuss your project.",
       "cta": "Contact Us Today"
     }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "We deliver comprehensive software solutions tailored to your business needs"
+    },
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "description": "Tailored solutions designed to meet your unique business needs. We create scalable, secure, and efficient software that drives your business forward.",
+      "features": [
+        "Enterprise Software Solutions",
+        "AI-Integrate applications",
+        "API Development & Integration",
+        "Legacy System Modernization"
+      ]
+    }
   }
-} 
+}

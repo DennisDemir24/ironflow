@@ -10,20 +10,10 @@ const projects = [
     tags: ['Next.js', 'TypeScript', 'TailwindCSS'],
     imageUrl: '/projects/habiter.png',
     demoUrl: 'https://demo-ecommerce.example.com',
-    githubUrl: 'https://github.com/example/ecommerce',
+    githubUrl: 'https://github.com/DennisDemir24/habiter-landing',
     client: 'Habiter App',
-    industry: 'Retail & Fashion',
-    timeline: '6 months',
-    teamSize: '8 developers',
-    challenge: 'FashionRetail Co. was struggling with an outdated e-commerce platform that couldn\'t handle their growing customer base. They faced frequent site crashes during peak sales, poor mobile experience, and low conversion rates due to generic product recommendations.',
-    solution: 'We developed a modern e-commerce platform using Next.js and TypeScript, implementing AI-powered product recommendations, real-time inventory management, and a responsive design. The solution included advanced analytics, A/B testing capabilities, and seamless integration with their existing ERP system.',
-    results: [
-      '300% increase in mobile conversion rate',
-      '50% reduction in server costs through optimized architecture',
-      '99.99% uptime during Black Friday sale with 2M+ concurrent users',
-      '40% increase in average order value through AI recommendations',
-      'Reduced page load time from 4.2s to 0.8s'
-    ]
+    challenge: 'We needed a marketing page for Habiter, a mobile application for creating better habits and track your progress.',
+    solution: 'We used Next.js and TypeScript to build a marketing page for Habiter.',
   },
   {
     title: 'Habiter Mobile App',
@@ -31,42 +21,22 @@ const projects = [
     tags: ['React-Native', 'Expo', 'TailwindCSS', 'SQL'],
     imageUrl: '/projects/habiter-app.png',
     demoUrl: '',
-    githubUrl: '',
+    githubUrl: 'https://github.com/DennisDemir24/habiter',
     client: 'Habiter App',
-    industry: 'Lifestyle',
-    timeline: '12 months',
-    teamSize: '15 developers',
-    challenge: 'DataCorp needed to process and analyze massive amounts of data from multiple sources in real-time. Their existing solution was slow, prone to errors, and couldn\'t provide actionable insights quickly enough for their clients.',
-    solution: 'We built a scalable analytics platform using React and Python, incorporating machine learning models for predictive analytics. The solution features real-time data processing, interactive visualizations, and automated report generation with natural language insights.',
-    results: [
-      'Reduced data processing time by 90%',
-      'Achieved 95% accuracy in predictive analytics',
-      'Automated 75% of routine analysis tasks',
-      'Integrated 50+ data sources in real-time',
-      'Saved clients an average of 20 hours per week in manual analysis'
-    ]
+    challenge: 'I wanted a mobile app to help me create better habits and track my progress. I looked around for a application that could help me with that, but I couldn\'t find one that I liked. So thats when Habiter was born.',
+    solution: 'I wanted to build a mobile app that helps me create better habits and track my progress. I built it using React-Native and Expo.',
   },
-/*   {
-    title: 'FinTech Mobile Banking Platform',
-    description: 'Secure and intuitive mobile banking solution with advanced features',
-    tags: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
-    imageUrl: '/projects/banking.jpg',
-    demoUrl: 'https://demo-banking.example.com',
-    githubUrl: 'https://github.com/example/banking',
-    client: 'NextGen Bank',
-    industry: 'Financial Services',
-    timeline: '12 months',
-    teamSize: '15 developers',
-    challenge: 'NextGen Bank wanted to transform their traditional banking services into a digital-first experience. They needed a secure, scalable mobile platform that could handle millions of transactions while providing a seamless user experience.',
-    solution: 'We developed a comprehensive mobile banking platform using React Native, implementing biometric authentication, real-time transaction processing, and AI-powered fraud detection. The solution includes features like peer-to-peer payments, investment tracking, and personalized financial insights.',
-    results: [
-      'Achieved 4.8/5 rating on app stores',
-      'Processed $2B+ in transactions in first year',
-      'Reduced fraud incidents by 75%',
-      '2M+ active users within 6 months',
-      'Cut transaction processing time to under 1 second'
-    ]
-  } */
+  {
+    title: 'HobbyLink',
+    description: 'HobbyLink is a platform that connects people with similar hobbies and interests, facilitating meaningful relationships through shared passions.',
+    tags: ['NextJs', 'Supabase', 'TailwindCSS', 'PostgreSQL'],
+    imageUrl: '/projects/hobby-link.png',
+    demoUrl: '',
+    githubUrl: 'https://github.com/DennisDemir24/hobby-link',
+    client: 'HobbyLink',
+    challenge: 'The vision is to create a vibrant community where people discover others who share their passions, form meaningful connections, and enrich their hobby experiences through collaborative learning and shared activities.',
+    solution: 'We built a platform that allows users to discover others who share their passions, form meaningful connections, and enrich their hobby experiences through collaborative learning and shared activities.',
+  },
 ]
 
 export default function ProjectsPage() {

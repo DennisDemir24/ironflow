@@ -13,12 +13,8 @@ interface ProjectCardProps {
   demoUrl?: string
   githubUrl?: string
   client: string
-  industry: string
   challenge: string
   solution: string
-  results: string[]
-  timeline: string
-  teamSize: string
 }
 
 export default function ProjectCard({
@@ -29,18 +25,14 @@ export default function ProjectCard({
   demoUrl,
   githubUrl,
   client,
-  industry,
   challenge,
   solution,
-  results,
-  timeline,
-  teamSize
 }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="bg-background rounded-lg border overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <div className="bg-background rounded-lg border overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-gray-300">
       <div
         className="relative aspect-[16/9] overflow-hidden cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
@@ -54,27 +46,27 @@ export default function ProjectCard({
             isHovered ? 'scale-110' : 'scale-100'
           }`}
         />
-        <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
         
         <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {demoUrl && (
             <Link
               href={demoUrl}
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-md flex items-center gap-2 hover:bg-primary/90 transition-colors"
+              className="group bg-primary text-primary-foreground px-4 py-2 rounded-md flex items-center gap-2 transition-all duration-300"
               target="_blank"
             >
               Live Demo
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:scale-125" />
             </Link>
           )}
           {githubUrl && (
             <Link
               href={githubUrl}
-              className="bg-background/90 text-foreground px-4 py-2 rounded-md flex items-center gap-2 hover:bg-background transition-colors"
+              className="group bg-background/90 text-foreground px-4 py-2 rounded-md flex items-center gap-2 transition-all duration-300"
               target="_blank"
             >
               GitHub
-              <Github className="w-4 h-4" />
+              <Github className="w-4 h-4 transition-transform duration-300 group-hover:scale-125 group-hover:text-primary" />
             </Link>
           )}
         </div>
@@ -88,7 +80,7 @@ export default function ProjectCard({
           </div>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-2 p-2 hover:bg-accent rounded-full transition-colors"
+            className="mt-2 p-2 hover:bg-accent rounded-full transition-colors hover:text-primary"
             aria-label={isExpanded ? "Show less" : "Show more"}
           >
             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
@@ -99,7 +91,7 @@ export default function ProjectCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+              className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors cursor-default"
             >
               {tag}
             </span>
@@ -116,18 +108,6 @@ export default function ProjectCard({
                   <span className="text-muted-foreground">Client:</span>
                   <p className="font-medium">{client}</p>
                 </div>
-                <div>
-                  <span className="text-muted-foreground">Industry:</span>
-                  <p className="font-medium">{industry}</p>
-                </div>
-                <div>
-                  <span className="text-muted-foreground">Timeline:</span>
-                  <p className="font-medium">{timeline}</p>
-                </div>
-                <div>
-                  <span className="text-muted-foreground">Team Size:</span>
-                  <p className="font-medium">{teamSize}</p>
-                </div>
               </div>
 
               <div>
@@ -140,17 +120,16 @@ export default function ProjectCard({
                 <p className="text-muted-foreground">{solution}</p>
               </div>
 
-              <div>
-                <h4 className="font-semibold mb-2">Key Results</h4>
-                <ul className="space-y-2">
-                  {results.map((result, index) => (
-                    <li key={index} className="text-muted-foreground flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      {result}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Add a github logo */}
+              {githubUrl && (
+                <Link
+                  href={githubUrl}
+                  className="group bg-background/90 text-foreground px-4 py-2 rounded-md flex items-center gap-2 transition-all duration-300"
+                  target="_blank"
+                >
+                  <Github className="w-4 h-4 transition-transform duration-300 group-hover:scale-125 group-hover:text-primary" />
+                </Link>
+              )}
             </div>
           </div>
         </div>
