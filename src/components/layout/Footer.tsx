@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { Facebook, Twitter, Linkedin, Github, Mail, MapPin, Phone } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const companyInfo = {
   name: 'IronFlow Solutions',
@@ -35,6 +36,18 @@ const socialLinks = [
 
 export default function Footer() {
   const { t } = useTranslation('common')
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // Default texts for server rendering
+  const copyrightText = isClient 
+    ? t('footer.copyright')
+    : "© 2024 IronFlow Solutions. All rights reserved."
+  const privacyPolicyText = isClient ? t('footer.privacyPolicy') : "Privacy Policy"
+  const termsOfServiceText = isClient ? t('footer.termsOfService') : "Terms of Service"
 
   return (
     <footer className="bg-accent/5 border-t">
@@ -122,14 +135,14 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-muted-foreground">
-              {t('footer.copyright')}
+              {copyrightText}
             </p>
             <div className="flex gap-4 text-sm text-muted-foreground">
               <Link href="/privacy" className="hover:text-primary transition-colors">
-                {t('footer.privacyPolicy')}
+                {privacyPolicyText}
               </Link>
               <Link href="/terms" className="hover:text-primary transition-colors">
-                {t('footer.termsOfService')}
+                {termsOfServiceText}
               </Link>
             </div>
           </div>

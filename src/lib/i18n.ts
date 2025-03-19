@@ -6,23 +6,10 @@ import resourcesToBackend from 'i18next-resources-to-backend'
 import { getOptions } from './i18n-options'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-// Get the stored language preference if available
-let storedLanguage = 'en'
-if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
-  try {
-    const savedLanguage = localStorage.getItem('i18nextLng')
-    if (savedLanguage) {
-      storedLanguage = savedLanguage
-    }
-  } catch (error) {
-    console.error('Error accessing localStorage:', error)
-  }
-}
-
-// Initialize i18next for client-side
+// Initialize with default locale 'en' always for server-side rendering
+// This ensures consistent server/client initial render
 i18next
   .use(initReactI18next)
-  .use(LanguageDetector)
   .use(
     resourcesToBackend(
       (language: string, namespace: string) =>
@@ -30,11 +17,16 @@ i18next
     )
   )
   .init({
-    ...getOptions(storedLanguage),
+    ...getOptions('en'), // Always use 'en' as default for initial render
     detection: {
       order: ['localStorage', 'htmlTag', 'cookie', 'navigator'],
       caches: ['localStorage'],
     },
-  })
+  });
+
+// Language detector will be initialized on the client side only
+if (typeof window !== 'undefined') {
+  i18next.use(LanguageDetector);
+}
 
 export default i18next 
